@@ -1,138 +1,188 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.10.12 on linux)" generated="2024-05-19T19:31:56.689675" rpa="false" schemaversion="5">
-<suite id="s1" name="Loan Tests" source="/home/victor-dev/Área de Trabalho/test-parabank/tests/emprestimo/loan_tests.robot">
-<test id="s1-t1" name="Solicitação de empréstimo com sucesso" line="12">
+<robot generator="Robot 7.0 (Python 3.10.12 on linux)" generated="2024-05-19T20:00:41.421903" rpa="false" schemaversion="5">
+<suite id="s1" name="Billpay Tests" source="/home/victor-dev/Área de Trabalho/test-parabank/tests/contas/billpay_tests.robot">
+<test id="s1-t1" name="Pagamento de conta com sucesso" line="12">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-05-19T19:31:56.768590" level="INFO">Opening browser 'chrome' to base url 'https://parabank.parasoft.com/parabank/index.htm'.</msg>
+<msg time="2024-05-19T20:00:41.501277" level="INFO">Opening browser 'chrome' to base url 'https://parabank.parasoft.com/parabank/index.htm'.</msg>
 <arg>${LOGIN_URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-05-19T19:31:56.768393" elapsed="11.435200"/>
+<status status="PASS" start="2024-05-19T20:00:41.501074" elapsed="14.844129"/>
 </kw>
 <kw name="Input Username" owner="login_keywords">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-19T19:32:08.205192" level="INFO">Typing text 'carlos' into text field 'name=username'.</msg>
+<msg time="2024-05-19T20:00:56.348236" level="INFO">Typing text 'john' into text field 'name=username'.</msg>
 <arg>name=username</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-19T19:32:08.204611" elapsed="0.057729"/>
+<status status="PASS" start="2024-05-19T20:00:56.347498" elapsed="0.056630"/>
 </kw>
-<arg>${VALID_NEW_ACCOUNT}</arg>
-<status status="PASS" start="2024-05-19T19:32:08.204098" elapsed="0.058375"/>
+<arg>${VALID_USERNAME}</arg>
+<status status="PASS" start="2024-05-19T20:00:56.346409" elapsed="0.058129"/>
 </kw>
 <kw name="Input Password" owner="login_keywords">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-19T19:32:08.263229" level="INFO">Typing text '1234' into text field 'name=password'.</msg>
+<msg time="2024-05-19T20:00:56.405256" level="INFO">Typing text 'demo' into text field 'name=password'.</msg>
 <arg>name=password</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-19T19:32:08.263043" elapsed="0.050182"/>
+<status status="PASS" start="2024-05-19T20:00:56.405067" elapsed="0.052892"/>
 </kw>
-<arg>${VALID_NEW_PASSWORD}</arg>
-<status status="PASS" start="2024-05-19T19:32:08.262724" elapsed="0.050655"/>
+<arg>${VALID_PASSWORD}</arg>
+<status status="PASS" start="2024-05-19T20:00:56.404776" elapsed="0.053310"/>
 </kw>
 <kw name="Click Login Button" owner="login_keywords">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-05-19T19:32:08.314051" level="INFO">Clicking button 'css=input[type="submit"]'.</msg>
+<msg time="2024-05-19T20:00:56.458710" level="INFO">Clicking button 'css=input[type="submit"]'.</msg>
 <arg>css=input[type="submit"]</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-19T19:32:08.313899" elapsed="1.590736"/>
+<status status="PASS" start="2024-05-19T20:00:56.458555" elapsed="2.449050"/>
 </kw>
-<status status="PASS" start="2024-05-19T19:32:08.313646" elapsed="1.591207"/>
+<status status="PASS" start="2024-05-19T20:00:56.458318" elapsed="2.449552"/>
 </kw>
 <kw name="Login Should Be Successful" owner="login_keywords">
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-05-19T19:32:09.927511" level="INFO">Element 'xpath=//a[contains(text(),'Log Out')]' is displayed.</msg>
+<msg time="2024-05-19T20:00:58.935755" level="INFO">Element 'xpath=//a[contains(text(),'Log Out')]' is displayed.</msg>
 <arg>xpath=//a[contains(text(),'Log Out')]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-19T19:32:09.906153" elapsed="0.021452"/>
+<status status="PASS" start="2024-05-19T20:00:58.909053" elapsed="0.026822"/>
 </kw>
-<status status="PASS" start="2024-05-19T19:32:09.905396" elapsed="0.022310"/>
-</kw>
-<kw name="Go To Loan Page" owner="loan_keywords">
-<kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-05-19T19:32:09.928291" level="INFO">Opening url 'https://parabank.parasoft.com/parabank/requestloan.htm'</msg>
-<arg>https://parabank.parasoft.com/parabank/requestloan.htm</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-05-19T19:32:09.928180" elapsed="2.088221"/>
-</kw>
-<status status="PASS" start="2024-05-19T19:32:09.927938" elapsed="2.088658"/>
+<status status="PASS" start="2024-05-19T20:00:58.908408" elapsed="0.027584"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-05-19T19:32:15.017842" level="INFO">Slept 3 seconds.</msg>
+<msg time="2024-05-19T20:01:01.936777" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-05-19T19:32:12.017078" elapsed="3.001037"/>
+<status status="PASS" start="2024-05-19T20:00:58.936195" elapsed="3.000857"/>
 </kw>
-<kw name="Input Loan Details" owner="loan_keywords">
+<kw name="Go To Bill Pay Page" owner="billpay_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-19T20:01:01.939121" level="INFO">Opening url 'https://parabank.parasoft.com/parabank/billpay.htm'</msg>
+<arg>https://parabank.parasoft.com/parabank/billpay.htm</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-19T20:01:01.938525" elapsed="2.226264"/>
+</kw>
+<status status="PASS" start="2024-05-19T20:01:01.937780" elapsed="2.227219"/>
+</kw>
+<kw name="Input Bill Pay Details" owner="billpay_keywords">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-19T19:32:15.020436" level="INFO">Typing text '1000' into text field 'id=amount'.</msg>
-<arg>id=amount</arg>
-<arg>${loan_amount}</arg>
+<msg time="2024-05-19T20:01:04.166610" level="INFO">Typing text 'Payee' into text field 'css=input[name='payee.name']'.</msg>
+<arg>css=input[name='payee.name']</arg>
+<arg>${payee_name}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-19T19:32:15.019883" elapsed="0.060207"/>
+<status status="PASS" start="2024-05-19T20:01:04.166217" elapsed="0.056404"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-19T19:32:15.080913" level="INFO">Typing text '100' into text field 'id=downPayment'.</msg>
-<arg>id=downPayment</arg>
-<arg>${down_payment}</arg>
+<msg time="2024-05-19T20:01:04.223076" level="INFO">Typing text '123 Street' into text field 'css=input[name='payee.address.street']'.</msg>
+<arg>css=input[name='payee.address.street']</arg>
+<arg>${address}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-19T19:32:15.080583" elapsed="0.047267"/>
+<status status="PASS" start="2024-05-19T20:01:04.222831" elapsed="0.062135"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-19T20:01:04.285775" level="INFO">Typing text 'City' into text field 'css=input[name='payee.address.city']'.</msg>
+<arg>css=input[name='payee.address.city']</arg>
+<arg>${city}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-19T20:01:04.285297" elapsed="0.047290"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-19T20:01:04.333547" level="INFO">Typing text 'State' into text field 'css=input[name='payee.address.state']'.</msg>
+<arg>css=input[name='payee.address.state']</arg>
+<arg>${state}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-19T20:01:04.332882" elapsed="0.050607"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-19T20:01:04.384198" level="INFO">Typing text '12345' into text field 'css=input[name='payee.address.zipCode']'.</msg>
+<arg>css=input[name='payee.address.zipCode']</arg>
+<arg>${zip_code}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-19T20:01:04.383804" elapsed="0.051474"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-19T20:01:04.436170" level="INFO">Typing text '555-1234' into text field 'css=input[name='payee.phoneNumber']'.</msg>
+<arg>css=input[name='payee.phoneNumber']</arg>
+<arg>${phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-19T20:01:04.435698" elapsed="0.046694"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-19T20:01:04.483159" level="INFO">Typing text '987654321' into text field 'css=input[name='payee.accountNumber']'.</msg>
+<arg>css=input[name='payee.accountNumber']</arg>
+<arg>${account}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-19T20:01:04.482736" elapsed="0.043354"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-19T20:01:04.526816" level="INFO">Typing text '987654321' into text field 'css=input[name='verifyAccount']'.</msg>
+<arg>css=input[name='verifyAccount']</arg>
+<arg>${account}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-19T20:01:04.526432" elapsed="0.048334"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-19T20:01:04.575304" level="INFO">Typing text '100' into text field 'css=input[name='amount']'.</msg>
+<arg>css=input[name='amount']</arg>
+<arg>${amount}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-19T20:01:04.575035" elapsed="0.043819"/>
 </kw>
 <kw name="Select From List By Value" owner="SeleniumLibrary">
-<msg time="2024-05-19T19:32:15.128788" level="INFO">Selecting options from selection list 'id=fromAccountId' by value 17118.</msg>
-<arg>id=fromAccountId</arg>
+<msg time="2024-05-19T20:01:04.619543" level="INFO">Selecting options from selection list 'css=select[name='fromAccountId']' by value 13344.</msg>
+<arg>css=select[name='fromAccountId']</arg>
 <arg>${from_account}</arg>
 <doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2024-05-19T19:32:15.128471" elapsed="0.026732"/>
+<status status="PASS" start="2024-05-19T20:01:04.619164" elapsed="0.047008"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-05-19T19:32:15.155618" level="INFO">Clicking button 'xpath=//input[@type='button' and @value='Apply Now']'.</msg>
-<arg>xpath=//input[@type='button' and @value='Apply Now']</arg>
+<msg time="2024-05-19T20:01:04.666744" level="INFO">Clicking button 'xpath=//input[@type='button' and @value='Send Payment']'.</msg>
+<arg>xpath=//input[@type='button' and @value='Send Payment']</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-19T19:32:15.155411" elapsed="0.028212"/>
+<status status="PASS" start="2024-05-19T20:01:04.666459" elapsed="0.037027"/>
 </kw>
-<arg>1000</arg>
+<arg>Payee</arg>
+<arg>123 Street</arg>
+<arg>City</arg>
+<arg>State</arg>
+<arg>12345</arg>
+<arg>555-1234</arg>
+<arg>987654321</arg>
 <arg>100</arg>
-<arg>${FROM_ACCOUNT_CARLOS}</arg>
-<status status="PASS" start="2024-05-19T19:32:15.018893" elapsed="0.164943"/>
+<arg>${FROM_ACCOUNT}</arg>
+<status status="PASS" start="2024-05-19T20:01:04.165347" elapsed="0.538392"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-05-19T19:32:18.185082" level="INFO">Slept 3 seconds.</msg>
+<msg time="2024-05-19T20:01:07.705061" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-05-19T19:32:15.184167" elapsed="3.001171"/>
+<status status="PASS" start="2024-05-19T20:01:04.704085" elapsed="3.001247"/>
 </kw>
-<kw name="Loan Request Should Be Successful" owner="loan_keywords">
+<kw name="Bill Pay Should Be Successful" owner="billpay_keywords">
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-05-19T19:32:18.297433" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-05-19T19:32:18.297651" level="FAIL">The element 'xpath=//h1[contains(text(),'Loan Request Processed')]' should be visible, but it is not.</msg>
-<arg>xpath=//h1[contains(text(),'Loan Request Processed')]</arg>
+<msg time="2024-05-19T20:01:07.743171" level="INFO">Element 'xpath=//h1[contains(text(),'Bill Payment Complete')]' is displayed.</msg>
+<arg>xpath=//h1[contains(text(),'Bill Payment Complete')]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="FAIL" start="2024-05-19T19:32:18.186762" elapsed="0.111466">The element 'xpath=//h1[contains(text(),'Loan Request Processed')]' should be visible, but it is not.</status>
+<status status="PASS" start="2024-05-19T20:01:07.706892" elapsed="0.036435"/>
 </kw>
-<status status="FAIL" start="2024-05-19T19:32:18.186076" elapsed="0.112308">The element 'xpath=//h1[contains(text(),'Loan Request Processed')]' should be visible, but it is not.</status>
+<status status="PASS" start="2024-05-19T20:01:07.706114" elapsed="0.037374"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-05-19T19:32:18.298683" elapsed="0.061000"/>
-</kw>
-<doc>Testa a solicitação de empréstimo com valores válidos</doc>
-<tag>Loan com Sucesso</tag>
-<status status="FAIL" start="2024-05-19T19:31:56.767695" elapsed="21.592225">The element 'xpath=//h1[contains(text(),'Loan Request Processed')]' should be visible, but it is not.</status>
+<doc>Testa o pagamento de uma conta com valores válidos</doc>
+<tag>BillPay Sucesso</tag>
+<status status="PASS" start="2024-05-19T20:00:41.500310" elapsed="26.243443"/>
 </test>
-<doc>Testes de solicitação de empréstimo do ParaBank</doc>
-<status status="FAIL" start="2024-05-19T19:31:56.690444" elapsed="21.670138"/>
+<doc>Testes de pagamento de contas do ParaBank</doc>
+<status status="PASS" start="2024-05-19T20:00:41.422602" elapsed="26.321766"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">Loan com Sucesso</stat>
+<stat pass="1" fail="0" skip="0">BillPay Sucesso</stat>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Loan Tests">Loan Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Billpay Tests">Billpay Tests</stat>
 </suite>
 </statistics>
 <errors>
