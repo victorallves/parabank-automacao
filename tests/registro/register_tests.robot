@@ -12,7 +12,7 @@ Registro com sucesso
     [Documentation]    Testa o registro de um novo usuário com detalhes válidos
     [Tags]             Registro com Sucesso
     Open Browser       ${REGISTER_URL}  ${BROWSER}
-    register_keywords.Input Registration Details  vitu  jose  123 Street  City  State  12345  555-1234  123-45-6789  marcos  1234
+    register_keywords.Input Registration Details  vitu  jose  123 Street  City  State  12345  555-1234  123-45-6789  pedro  1234
     Sleep    3s
     register_keywords.Registration Should Be Successful
     [Teardown]         Close Browser

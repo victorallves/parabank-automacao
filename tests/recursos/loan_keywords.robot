@@ -13,4 +13,4 @@ Input Loan Details
     Click Button  xpath=//input[@type='button' and @value='Apply Now']
 
 Loan Request Should Be Successful
-    Wait Until Element Is Not Visible    xpath=//h1[contains(text(),'Loan Request Processed')]
+    Wait Until Element Is Visible    xpath=//p[contains(text(),'Congratulations, your loan has been approved.')]
