@@ -10,4 +10,3 @@ ${FROM_ACCOUNT}            13344
 ${TO_ACCOUNT}              13344
 ${VALID_NEW_ACCOUNT}       carlos
 ${VALID_NEW_PASSWORD}      1234
-${FROM_ACCOUNT_CARLOS}     14010

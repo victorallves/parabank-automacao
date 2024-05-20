@@ -19,7 +19,8 @@ Solicitação de empréstimo com sucesso
     login_keywords.Login Should Be Successful
     loan_keywords.Go To Loan Page
     Sleep    3s
-    loan_keywords.Input Loan Details  1000  100  ${FROM_ACCOUNT_CARLOS}
+    loan_keywords.Input Loan Details  1000  100 
     Sleep    3s
     loan_keywords.Loan Request Should Be Successful
     [Teardown]         Close Browser
+ 
